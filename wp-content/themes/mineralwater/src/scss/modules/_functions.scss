@@ -1,0 +1,35 @@
+@import './breakpoints';
+@import './vars';
+
+@mixin main-style-text {
+  font-family: $primaryFont;
+  font-size: $primary-font-size;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24.79px;
+}
+
+@mixin menu-logo {
+  font-family: $secondaryFont;
+  font-size: $font-size-logo-m;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  @media all and (min-width: $breakpoint-desktop-S) {
+    font-size: $font-size-logo-d;
+  }
+}
+
+@mixin menu-item {
+  font-family: $primaryFont;
+  font-size: $font-size-menu-item-m;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 41px;
+  @media all and (min-width: $breakpoint-desktop-S) {
+    font-size: $font-size-menu-item-d;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 21px;
+  }
+}

@@ -1,2 +1,22 @@
-$z-index-header: 1000;
+/*fonts*/
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-OpenSans: OpenSans, $font-family-sans-serif;
+$font-Geometria: Geometria, $font-family-sans-serif;
+$primaryFont: $font-OpenSans;
+$secondaryFont: $font-Geometria;
+
+/*font-size*/
+$font-size-text: 14px;
+
+$font-size-logo-m: 14px;
+$font-size-logo-d: 18px;
+
+$font-size-h1-m: 18px;
+$font-size-h1-d: 36px;
+
+$font-size-menu-item-m: 30px;
+$font-size-menu-item-d: 14px;
+
+$primary-font-size: $font-size-text;
 

@@ -1,8 +1,8 @@
 @import './fonts';
-@import './modules/fonts';
+@import './modules/vars';
 @import './modules/breakpoints';
 @import './modules/colors';
-@import './modules/pagination';
+@import './modules/functions';
 
 :root {
   --height-header-mobile: 37px;
@@ -26,7 +26,7 @@ html, body {
   //height: 100vh; //для того, чтобы прижать футер к низу страницы
   line-height: 1;
   font-size: 14px;
-  color: #fff;
+  //color: #fff;
   font-family: $primaryFont;
   scroll-behavior: smooth;
 }
@@ -47,6 +47,7 @@ body {
   padding: 0;
   position: relative;
   overflow-x: hidden;
+  @include main-style-text;
 }
 
 html.lock, body.lock {
@@ -61,7 +62,7 @@ html.lock, body.lock {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  overflow-x: hidden;
+  //overflow-x: hidden;
 }
 
 ul, ol {
@@ -109,10 +110,10 @@ input[type=number] {
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
-  @media all and (min-width: $breakpoint-tablet-L) {
-    padding: 0 70px;
-    max-width: 1920px; // = 1780px (width) + 140px (padding)
+  padding: 0 15px;
+  @media all and (min-width: $breakpoint-desktop-S) {
+    padding: 0 80px;
+    max-width: 1400px;
   }
 }
 
@@ -127,41 +128,12 @@ input[type=number] {
   }
 }
 
-.homepage-screen {
-  margin-bottom: 60px;
-  //@media all and (min-width: $breakpoint-tablet-L) {
-  //  margin-bottom: 100px;
-  //}
-  @media all and (min-width: $breakpoint-desktop-M) {
-    margin-bottom: 80px;
-  }
-}
-
-.title-block {
-  position: relative;
-
-  &:first-child {
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 1px;
-      background-color: $color-dark;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    height: 1px;
-    background-color: $color-dark;
-  }
-}
+//.homepage-screen {
+//  margin-bottom: 60px;
+//  @media all and (min-width: $breakpoint-desktop-M) {
+//    margin-bottom: 80px;
+//  }
+//}
 
 @import '../../components/all';
 
@@ -174,17 +146,4 @@ input[type=number] {
 @import './header';
 @import './footer';
 @import './ui';
-@import './anim';
-@import './modal';
 @import './modules/swiper';
-
-@import './pages/example';
-@import './pages/page-homepage';
-@import './pages/services';
-@import './pages/page-products';
-
-@import './animation/examples-animation';
-@import './animation/measure-animation';
-@import './animation/filter-animation';
-@import './animation/install-animation';
-@import './animation/choose-animation';

@@ -1,59 +1,47 @@
-//@font-face {
-//  font-family: 'SofiaProLight';
-//  src: url('../fonts/SofiaProLight.eot');
-//  src: url('../fonts/SofiaProLight.eot?#iefix') format('embedded-opentype'),
-//  url('../fonts/SofiaProLight.woff2') format('woff2'),
-//  url('../fonts/SofiaProLight.woff') format('woff'),
-//  url('../fonts/SofiaProLight.ttf') format('truetype');
-//  font-weight: 300;
-//  font-style: normal;
-//  font-display: swap;
-//}
-//
-//@font-face {
-//  font-family: 'SofiaProRegular';
-//  src: url('../fonts/SofiaProRegular.eot');
-//  src: url('../fonts/SofiaProRegular.eot?#iefix') format('embedded-opentype'),
-//  url('../fonts/SofiaProRegular.woff2') format('woff2'),
-//  url('../fonts/SofiaProRegular.woff') format('woff'),
-//  url('../fonts/SofiaProRegular.ttf') format('truetype');
-//  font-weight: normal;
-//  font-style: normal;
-//  font-display: swap;
-//}
-//
-//@font-face {
-//  font-family: 'SofiaProSemiBold';
-//  src: url('../fonts/SofiaProSemiBold.eot');
-//  src: url('../fonts/SofiaProSemiBold.eot?#iefix') format('embedded-opentype'),
-//  url('../fonts/SofiaProSemiBold.woff2') format('woff2'),
-//  url('../fonts/SofiaProSemiBold.woff') format('woff'),
-//  url('../fonts/SofiaProSemiBold.ttf') format('truetype');
-//  font-weight: 600;
-//  font-style: normal;
-//  font-display: swap;
-//}
-//
-//@font-face {
-//  font-family: 'NHaasGroteskTXPro-65Md';
-//  src: url('../fonts/NHaasGroteskTXPro-65Md.eot');
-//  src: url('../fonts/NHaasGroteskTXPro-65Md.eot?#iefix') format('embedded-opentype'),
-//  url('../fonts/NHaasGroteskTXPro-65Md.woff2') format('woff2'),
-//  url('../fonts/NHaasGroteskTXPro-65Md.woff') format('woff'),
-//  url('../fonts/NHaasGroteskTXPro-65Md.ttf') format('truetype');
-//  font-weight: 500;
-//  font-style: normal;
-//  font-display: swap;
-//}
-//
-//@font-face {
-//  font-family: 'NHaasGroteskTXPro-75Bd';
-//  src: url('../fonts/NHaasGroteskTXPro-75Bd.eot');
-//  src: url('../fonts/NHaasGroteskTXPro-75Bd.eot?#iefix') format('embedded-opentype'),
-//  url('../fonts/NHaasGroteskTXPro-75Bd.woff2') format('woff2'),
-//  url('../fonts/NHaasGroteskTXPro-75Bd.woff') format('woff'),
-//  url('../fonts/NHaasGroteskTXPro-75Bd.ttf') format('truetype');
-//  font-weight: bold;
-//  font-style: normal;
-//  font-display: swap;
-//}
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria-Medium.eot');
+  src: url('../fonts/Geometria-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Geometria-Medium.woff2') format('woff2'),
+  url('../fonts/Geometria-Medium.woff') format('woff'),
+  url('../fonts/Geometria-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans-Bold.eot');
+  src: url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+  url('../fonts/OpenSans-Bold.woff') format('woff'),
+  url('../fonts/OpenSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans-Regular.eot');
+  src: url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+  url('../fonts/OpenSans-Regular.woff') format('woff'),
+  url('../fonts/OpenSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans-SemiBold.eot');
+  src: url('../fonts/OpenSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/OpenSans-SemiBold.woff2') format('woff2'),
+  url('../fonts/OpenSans-SemiBold.woff') format('woff'),
+  url('../fonts/OpenSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
