@@ -1,0 +1,190 @@
+@import './fonts';
+@import './modules/fonts';
+@import './modules/breakpoints';
+@import './modules/colors';
+@import './modules/pagination';
+
+:root {
+  --height-header-mobile: 37px;
+  --height-header-desktop: 79px;
+}
+
+*, *:before, *::before, *:after, *::after {
+  box-sizing: border-box;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  //height: 100vh; //для того, чтобы прижать футер к низу страницы
+  line-height: 1;
+  font-size: 14px;
+  color: #fff;
+  font-family: $primaryFont;
+  scroll-behavior: smooth;
+}
+
+html.lock, body.lock {
+  //overflow-y: hidden;
+  position: fixed;
+  height: 100vh;
+}
+
+body {
+  box-sizing: border-box;
+  zoom: 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+html.lock, body.lock {
+  overflow-y: hidden;
+  position: fixed;
+  height: 100vh;
+}
+
+.wrapper {
+  min-height: 100%;
+  min-height: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+ul, ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+td > ul {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: initial;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+
+  &:hover {
+    color: initial;
+    text-decoration: none;
+  }
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  @media all and (min-width: $breakpoint-tablet-L) {
+    padding: 0 70px;
+    max-width: 1920px; // = 1780px (width) + 140px (padding)
+  }
+}
+
+.content {
+  flex: 1 1 auto;
+  color: $color-dark;
+  position: relative;
+  z-index: 1;
+  margin-top: var(--height-header-mobile);
+  @media all and (min-width: $breakpoint-tablet-L) {
+    margin-top: var(--height-header-desktop);
+  }
+}
+
+.homepage-screen {
+  margin-bottom: 60px;
+  //@media all and (min-width: $breakpoint-tablet-L) {
+  //  margin-bottom: 100px;
+  //}
+  @media all and (min-width: $breakpoint-desktop-M) {
+    margin-bottom: 80px;
+  }
+}
+
+.title-block {
+  position: relative;
+
+  &:first-child {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 1px;
+      background-color: $color-dark;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: $color-dark;
+  }
+}
+
+@import '../../components/all';
+
+@import '../../node_modules/swiper/swiper';
+@import '../../node_modules/simplebar/src/simplebar';
+@import '../../node_modules/tippy.js/dist/tippy.css';
+@import '../../node_modules/tippy.js/animations/scale.css';
+@import '../../node_modules/tippy.js/themes/light-border.css';
+
+@import './header';
+@import './footer';
+@import './ui';
+@import './anim';
+@import './modal';
+@import './modules/swiper';
+
+@import './pages/example';
+@import './pages/page-homepage';
+@import './pages/services';
+@import './pages/page-products';
+
+@import './animation/examples-animation';
+@import './animation/measure-animation';
+@import './animation/filter-animation';
+@import './animation/install-animation';
+@import './animation/choose-animation';

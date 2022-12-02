@@ -1,0 +1,675 @@
+@import "../modules/vars";
+@import "../modules/functions";
+@import "../modules/breakpoints";
+@import "../modules/colors";
+
+.main-screen {
+  min-height: 627px;
+  height: 100%;
+  background-image: url("../img/background-main-screen.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  @media all and (min-width: $breakpoint-tablet-L) {
+    min-height: 940px;
+    background-image: url("../img/background-desktop-main-screen.png");
+    background-attachment: fixed;
+  }
+
+  &__row {
+    &_block {
+      flex: 0 1 50%;
+    }
+  }
+
+  .inner {
+    @media all and (min-width: $breakpoint-tablet-L) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  h1 {
+    padding: 197px 0 10px;
+    text-align: center;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      padding: 188px 0 25px;
+      text-align: left;
+    }
+    @media all and (min-width: $breakpoint-desktop-M) {
+      padding: 326px 0 25px;
+      text-align: left;
+    }
+  }
+
+  &__disc {
+    padding-bottom: 30px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      padding-bottom: 50px;
+      text-align: left;
+      font-size: 36px;
+      line-height: 42px;
+    }
+  }
+}
+
+.install-screen, .choose-screen {
+  h2 {
+    img {
+      opacity: 0.7;
+    }
+  }
+
+  span {
+    &:last-child {
+      max-width: 95px;
+    }
+
+    svg {
+      transform: translateY(6px);
+    }
+  }
+}
+
+.install-screen-wrap {
+  position: relative;
+
+  .install-screen-inner {
+    @media all and (min-width: $breakpoint-tablet-L) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  &::after {
+    @media all and (min-width: $breakpoint-tablet-L) {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: 1px;
+      background-color: $color-dark;
+    }
+  }
+
+  .title-block {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      //flex: 0 1 33.33%;
+    }
+
+    &::after {
+      @media all and (min-width: $breakpoint-tablet-L) {
+        display: none;
+      }
+    }
+
+    &:first-child {
+      &::before {
+        content: "";
+        display: none;
+      }
+    }
+
+    &:nth-child(2) {
+      @media all and (min-width: $breakpoint-tablet-L) {
+        border-right: 1px solid $color-dark;
+        border-left: 1px solid $color-dark;
+      }
+    }
+
+    &:not(:last-child) {
+      @media all and (min-width: $breakpoint-tablet-L) {
+        padding-right: 40px;
+      }
+      @media all and (min-width: $breakpoint-desktop-M) {
+        padding-right: 70px;
+      }
+    }
+
+    &:not(:first-child) {
+      @media all and (min-width: $breakpoint-tablet-L) {
+        padding-left: 40px;
+      }
+      @media all and (min-width: $breakpoint-desktop-M) {
+        padding-left: 70px;
+      }
+    }
+  }
+
+  .install-image {
+    position: relative;
+    padding: 0 0 50%;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 5px;
+
+    @media all and (min-width: $breakpoint-tablet-L) {
+      padding: 0;
+      height: 250px;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto 24px;
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: contain;
+      object-position: top;
+      transition: 1s;
+
+      @media all and (min-width: $breakpoint-tablet-L) {
+        object-fit: cover;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  h3 {
+    margin-bottom: 30px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      font-size: 36px;
+      line-height: 42px;
+    }
+  }
+
+  .install-disc {
+    margin-bottom: 40px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      margin-bottom: 76px;
+      font-size: 20px;
+      line-height: 23px;
+
+      min-height: 116px;
+      //overflow: hidden;
+      //text-overflow: ellipsis;
+      //display: -webkit-box;
+      //-webkit-line-clamp: 5;
+      //-webkit-box-orient: vertical;
+    }
+    @media all and (min-width: $breakpoint-desktop-M) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  .install-link {
+    max-width: 335px;
+    width: 100%;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      max-width: initial;
+    }
+  }
+}
+
+.install-wrap.container {
+  @media all and (min-width: $breakpoint-tablet-L) {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    max-width: none;
+  }
+}
+
+.install-screen-inner.container {
+  @media all and (max-width: $breakpoint-tablet-L - 1px) {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    max-width: none;
+  }
+}
+
+.examples-screen {
+  .st0 {
+    opacity: 0.2;
+    fill: #FFFFFF;
+  }
+
+  .st1 {
+    fill: #FFFFFF;
+  }
+
+  .st2 {
+    fill: none;
+    stroke: #242C88;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st3 {
+    fill: #5E61A3;
+  }
+
+  .st4 {
+    opacity: 0.5;
+    fill: #242C88;
+  }
+
+  .st5 {
+    fill: #39C89A;
+  }
+
+  .st6 {
+    fill: #CAEAFB;
+  }
+
+  .st7 {
+    fill: #589FFF;
+  }
+
+  .st8 {
+    fill: #FF5751;
+  }
+
+  .st9 {
+    fill: #BC8D66;
+  }
+
+  .st10 {
+    opacity: 0.7;
+    fill: #FFFFFF;
+  }
+
+  .st11 {
+    fill: #F1C92A;
+  }
+
+  .st12 {
+    opacity: 0.4;
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st13 {
+    fill: #F3877E;
+  }
+
+  .st14 {
+    fill: #83D689;
+  }
+
+  .st15 {
+    opacity: 0.4;
+    fill: #242C88;
+  }
+
+  .st16 {
+    opacity: 0.2;
+    fill: #242C88;
+  }
+
+  .st17 {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 0.1, 6;
+  }
+
+  .st18 {
+    fill: #FFC408;
+  }
+
+  .st19 {
+    opacity: 0.4;
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 0.1, 6;
+  }
+
+  .st20 {
+    fill: none;
+    stroke: #CAEAFB;
+    stroke-width: 12;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st21 {
+    fill: none;
+    stroke: #CAEAFB;
+    stroke-width: 7;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st22 {
+    opacity: 0.4;
+    fill: none;
+    stroke: #242C88;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st23 {
+    opacity: 0.5;
+  }
+
+  .st24 {
+    fill: #242C88;
+  }
+
+  .st25 {
+    fill: none;
+    stroke: #242C88;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 0.1, 6;
+  }
+
+  .st26 {
+    opacity: 0.5;
+    fill: #FFFFFF;
+  }
+
+  .st27 {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st28 {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st29 {
+    fill: #E5BD9E;
+  }
+
+  .st30 {
+    fill: #A06D47;
+  }
+
+  .st31 {
+    opacity: 0.3;
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 0.1, 6;
+  }
+
+  .st32 {
+    opacity: 0.1;
+    fill: #242C88;
+  }
+
+  .st33 {
+    opacity: 0.5;
+    fill: #FF5751;
+  }
+
+  .st34 {
+    opacity: 0.2;
+    fill: none;
+    stroke: #242C88;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st35 {
+    opacity: 0.3;
+    clip-path: url(#SVGID_2_);
+  }
+
+  .st36 {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 0, 6;
+  }
+
+  .st37 {
+    opacity: 0.3;
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 0, 6;
+  }
+
+  .st38 {
+    clip-path: url(#SVGID_4_);
+  }
+
+  .st39 {
+    opacity: 0.2;
+    fill: none;
+    stroke: #242C88;
+    stroke-width: 9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st40 {
+    opacity: 0.3;
+  }
+
+  .st41 {
+    opacity: 0.4;
+    fill: #FFFFFF;
+  }
+
+  .st42 {
+    opacity: 0.5;
+    fill: #CAEAFB;
+  }
+
+  .st43 {
+    opacity: 0.6;
+    fill: #242C88;
+  }
+
+  .st44 {
+    opacity: 0.5;
+    fill: none;
+    stroke: #242C88;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st45 {
+    opacity: 0.3;
+    fill: #242C88;
+  }
+
+  .st46 {
+    opacity: 0.2;
+  }
+
+  .st47 {
+    clip-path: url(#SVGID_6_);
+    fill: none;
+    stroke: #242C88;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st48 {
+    opacity: 0.2;
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st49 {
+    clip-path: url(#SVGID_8_);
+    fill: #FFFFFF;
+  }
+
+  .st50 {
+    clip-path: url(#SVGID_8_);
+    fill: none;
+    stroke: #242C88;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st51 {
+    opacity: 0.2;
+    clip-path: url(#SVGID_8_);
+    fill: #242C88;
+  }
+
+  .st52 {
+    opacity: 0.2;
+    clip-path: url(#SVGID_8_);
+    fill: none;
+    stroke: #242C88;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st53 {
+    fill: none;
+    stroke: #242C88;
+    stroke-width: 1.848;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st54 {
+    opacity: 0.4;
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st55 {
+    opacity: 0.2;
+    fill: none;
+    stroke: #242C88;
+    stroke-width: 7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st56 {
+    opacity: 7.000000e-02;
+    fill: #242C88;
+  }
+
+  .st57 {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st58 {
+    opacity: 0.4;
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st59 {
+    opacity: 0.2;
+    fill: none;
+    stroke: #242C88;
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st60 {
+    fill: none;
+    stroke: #FF5751;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st61 {
+    fill: none;
+    stroke: #242C88;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+}
+

@@ -1,0 +1,347 @@
+@import './breakpoints';
+@import './colors';
+
+.product-swiper {
+
+  &__item {
+    margin-bottom: 2px;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    span {
+      &:last-child {
+        max-width: 95px;
+        @media all and (min-width: $breakpoint-tablet-L) {
+          max-width: initial !important;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+    padding: 0 0 32.3%;
+    margin-bottom: 40px;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      flex: 0 1 50%;
+      width: 800px;
+      height: 330px;
+      padding: 0;
+      margin: 0;
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      object-fit: contain;
+      object-position: top;
+    }
+  }
+
+  &__content {
+    @media all and (min-width: $breakpoint-tablet-L) {
+      flex: 0 1 50%;
+      padding: 0 0 0 60px;
+    }
+    @media all and (min-width: $breakpoint-desktop-M) {
+      flex: 0 1 50%;
+      padding: 0 0 0 100px;
+    }
+
+    &::before {
+      @media all and (min-width: $breakpoint-tablet-L) {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 1px;
+        height: 100%;
+        background-color: $color-dark;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      margin: 25px 0 19px 0;
+      font-size: 34px;
+      line-height: 38px;
+    }
+    @media all and (min-width: $breakpoint-desktop-M) {
+      margin: 45px 0 19px 0;
+      font-size: 36px;
+      line-height: 42px;
+    }
+  }
+
+  &__disk {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3px;
+    cursor: pointer;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      margin-bottom: 5px;
+    }
+
+    &_title {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+      @media all and (min-width: $breakpoint-tablet-L) {
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+
+    &_arrow {
+      width: 25px;
+      //transform: rotate(180deg);
+      transform: rotate(45deg);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      @media all and (min-width: $breakpoint-tablet-L) {
+        display: none;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &_arrow.active {
+      //transform: rotate(90deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  &__detail {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    width: calc(100% - 30px);
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    transition: all 0.2s ease;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      height: auto;
+      opacity: 1;
+      visibility: visible;
+      margin-bottom: 15px;
+      font-size: 20px;
+      line-height: 23px;
+    }
+    @media all and (min-width: $breakpoint-desktop-M) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  &__detail.active {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.2s ease;
+  }
+
+  &__btn {
+    margin: 25px auto;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      margin: 20px 0;
+    }
+    @media all and (min-width: $breakpoint-desktop-M) {
+      margin: 35px 0 45px;
+    }
+  }
+}
+
+.product-slider-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+  @media all and (min-width: $breakpoint-tablet-L) {
+    margin-top: 20px;
+  }
+
+  .swiper-prev,
+  .swiper-next {
+    cursor: pointer;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      width: 50px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .swiper-prev.swiper-button-disabled {
+    opacity: 0.3;
+  }
+
+  .swiper-next {
+    transform: rotate(180deg);
+  }
+
+  .swiper-next.swiper-button-disabled {
+    opacity: 0.3;
+  }
+
+  .swiper-pagination {
+    margin: 0 12px;
+    font-size: 16px;
+    line-height: 19px;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      font-size: 36px;
+      line-height: 42px;
+    }
+  }
+}
+
+.examples-swiper {
+  padding: 30px 0;
+  @media all and (min-width: $breakpoint-tablet-L) {
+    padding: 50px 0;
+  }
+
+  &__img {
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+.services-swiper {
+  .swiper-wrapper {
+    @media all and (min-width: $breakpoint-tablet-L) {
+      height: initial;
+    }
+  }
+
+  &__img {
+    img {
+      object-fit: contain;
+    }
+  }
+}
+
+.examples-swiper, .services-swiper {
+  &__img {
+    position: relative;
+    padding: 0 0 50%;
+    overflow: hidden;
+    border-radius: 5px;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      padding-bottom: 500px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      object-position: center;
+      transition: 0.5s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.examples-swiper {
+  &__img {
+    @media all and (min-width: $breakpoint-desktop-M) {
+      padding-bottom: 600px;
+    }
+  }
+}
+
+.services-swiper {
+  &__img {
+    @media all and (min-width: $breakpoint-desktop-M) {
+      padding-bottom: 650px;
+    }
+  }
+}
+
+.examples-slider-nav {
+  justify-content: flex-end;
+  margin-top: 10px;
+  @media all and (min-width: $breakpoint-tablet-L) {
+    margin-top: 20px;
+  }
+}
+
+.services-slider-nav {
+  justify-content: center;
+  margin: 15px 0;
+  @media all and (min-width: $breakpoint-tablet-L) {
+    margin: 25px 0 0 0;
+  }
+}
+
+.examples-slider-nav, .services-slider-nav {
+  display: flex;
+  align-items: center;
+
+  .examples-swiper-prev,
+  .examples-swiper-next,
+  .services-swiper-prev,
+  .services-swiper-next {
+    cursor: pointer;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      width: 50px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .examples-swiper-prev.swiper-button-disabled,
+  .services-swiper-prev.swiper-button-disabled {
+    opacity: 0.3;
+  }
+
+  .examples-swiper-next,
+  .services-swiper-next {
+    transform: rotate(180deg);
+  }
+
+  .examples-swiper-next.swiper-button-disabled,
+  .services-swiper-next.swiper-button-disabled {
+    opacity: 0.3;
+  }
+
+  .examples-swiper-pagination,
+  .services-swiper-pagination {
+    margin: 0 12px;
+    font-size: 16px;
+    line-height: 19px;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      font-size: 36px;
+      line-height: 42px;
+    }
+  }
+}
