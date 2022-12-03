@@ -63,16 +63,18 @@
 
 					<nav class="mobile-menu__nav">
 						<ul class="mobile-menu__list">
-							<li><a href="#" class="nav-item">Главная</a></li>
-							<li><a href="#" class="nav-item">Каталог</a></li>
-							<li><a href="#" class="nav-item">Как заказать</a></li>
-							<li><a href="#" class="nav-item">Отзывы</a></li>
-							<li><a href="#" class="nav-item">О нас</a></li>
-							<li><a href="#" class="nav-item">Контакты</a></li>
+							<li class="mobile-menu__item"><a href="#" class="nav-item">Главная</a></li>
+							<li class="mobile-menu__item"><a href="#" class="nav-item">Каталог</a></li>
+							<li class="mobile-menu__item"><a href="#" class="nav-item">Как заказать</a></li>
+							<li class="mobile-menu__item"><a href="#" class="nav-item">Отзывы</a></li>
+							<li class="mobile-menu__item"><a href="#" class="nav-item">О нас</a></li>
+							<li class="mobile-menu__item"><a href="#" class="nav-item">Контакты</a></li>
 
-							<li>
-								<a href="tel:+79280761498" class="nav-item">+7 (928) 076 14 98</a>
-							</li>
+							<li class="mobile-menu__phone"><a href="tel:+79280761498" class="nav-item">+7 (928) 076 14 98</a></li>
+
+							<div class="mobile-menu__btn btn">
+								<button type="submit">Заказать обратный звонок</button>
+							</div>
 						</ul>
 					</nav>
 				</div>

@@ -1,36 +1,28 @@
 @import './breakpoints';
 @import './colors';
+@import './functions';
 
 .product-swiper {
+  height: 236px;
+  margin-bottom: 39px;
+  @media all and (min-width: $breakpoint-desktop-S) {
+    height: 480px;
+    margin-bottom: 30px;
+  }
 
-  &__item {
-    margin-bottom: 2px;
-    @media all and (min-width: $breakpoint-tablet-L) {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-    }
-    span {
-      &:last-child {
-        max-width: 95px;
-        @media all and (min-width: $breakpoint-tablet-L) {
-          max-width: initial !important;
-          margin-left: 5px;
-        }
-      }
-    }
+  &__inner {
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
   }
 
   &__img {
     position: relative;
-    padding: 0 0 32.3%;
-    margin-bottom: 40px;
-    @media all and (min-width: $breakpoint-tablet-L) {
-      flex: 0 1 50%;
-      width: 800px;
-      height: 330px;
-      padding: 0;
-      margin: 0;
+    width: 320px;
+    height: 236px;
+    z-index: 2;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      height: 480px;
     }
 
     img {
@@ -44,173 +36,214 @@
     }
   }
 
-  &__content {
-    @media all and (min-width: $breakpoint-tablet-L) {
-      flex: 0 1 50%;
-      padding: 0 0 0 60px;
-    }
-    @media all and (min-width: $breakpoint-desktop-M) {
-      flex: 0 1 50%;
-      padding: 0 0 0 100px;
-    }
-
-    &::before {
-      @media all and (min-width: $breakpoint-tablet-L) {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 50%;
-        width: 1px;
-        height: 100%;
-        background-color: $color-dark;
-      }
-    }
+  &__img-b1, &__img-b2, &__img-b3 {
+    position: absolute;
   }
 
-  &__title {
-    margin-bottom: 10px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 23px;
-    @media all and (min-width: $breakpoint-tablet-L) {
-      margin: 25px 0 19px 0;
-      font-size: 34px;
-      line-height: 38px;
-    }
-    @media all and (min-width: $breakpoint-desktop-M) {
-      margin: 45px 0 19px 0;
-      font-size: 36px;
-      line-height: 42px;
-    }
-  }
-
-  &__disk {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 3px;
-    cursor: pointer;
-    @media all and (min-width: $breakpoint-tablet-L) {
-      margin-bottom: 5px;
-    }
-
-    &_title {
-      font-style: normal;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 21px;
-      @media all and (min-width: $breakpoint-tablet-L) {
-        font-size: 24px;
-        line-height: 28px;
-      }
-    }
-
-    &_arrow {
-      width: 25px;
-      //transform: rotate(180deg);
-      transform: rotate(45deg);
-      cursor: pointer;
-      transition: all 0.2s ease;
-      @media all and (min-width: $breakpoint-tablet-L) {
-        display: none;
-      }
-
-      img {
-        width: 100%;
-      }
-    }
-
-    &_arrow.active {
-      //transform: rotate(90deg);
-      transform: rotate(360deg);
-    }
-  }
-
-  &__detail {
-    height: 0;
-    opacity: 0;
-    visibility: hidden;
-    width: calc(100% - 30px);
-    margin-bottom: 10px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-    transition: all 0.2s ease;
-    @media all and (min-width: $breakpoint-tablet-L) {
-      height: auto;
-      opacity: 1;
-      visibility: visible;
-      margin-bottom: 15px;
-      font-size: 20px;
-      line-height: 23px;
-    }
-    @media all and (min-width: $breakpoint-desktop-M) {
-      font-size: 24px;
-      line-height: 28px;
-    }
-  }
-
-  &__detail.active {
-    height: auto;
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.2s ease;
-  }
-
-  &__btn {
-    margin: 25px auto;
-    @media all and (min-width: $breakpoint-tablet-L) {
-      margin: 20px 0;
-    }
-    @media all and (min-width: $breakpoint-desktop-M) {
-      margin: 35px 0 45px;
-    }
-  }
-}
-
-.product-slider-nav {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-top: 10px;
-  @media all and (min-width: $breakpoint-tablet-L) {
-    margin-top: 20px;
-  }
-
-  .swiper-prev,
-  .swiper-next {
-    cursor: pointer;
-    @media all and (min-width: $breakpoint-tablet-L) {
-      width: 50px;
+  &__img-b1 {
+    left: 39px;
+    top: 0;
+    z-index: 1;
+    filter: blur(2px);
+    @media all and (min-width: $breakpoint-desktop-S) {
+      left: -93px;
     }
 
     img {
+      @media all and (min-width: $breakpoint-desktop-S) {
+        width: 205px;
+      }
+    }
+  }
+
+  &__img-b2 {
+    left: 166px;
+    top: 78px;
+    z-index: 2;
+    filter: blur(2px);
+
+    @media all and (min-width: $breakpoint-desktop-S) {
+      left: 239px;
+      top: 133px;
+    }
+
+    img {
+      @media all and (min-width: $breakpoint-desktop-S) {
+        width: 290px;
+      }
+    }
+  }
+
+  &__img-b3 {
+    left: 0;
+    bottom: -20px;
+    z-index: 2;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    position: relative;
+  }
+
+  &__pagination {
+    position: absolute;
+    top: -100px !important;
+    right: 0 !important;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      top: -240px !important;
+    }
+  }
+
+  &__fraction {
+    position: absolute;
+    top: -230px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-grey;
+    @include fraction;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      top: -437px;
+      left: 23px;
+      font-size: $font-size-fraction-d;
+    }
+  }
+
+  &__timer {
+    width: 100%;
+    height: 4px;
+    background: $color-grey-light;
+    z-index: 2;
+  }
+
+  &__timer-in {
+    background: $color-blue;
+    width: 0;
+    height: 4px;
+    display: block;
+  }
+
+  &__timer-in.active {
+    width: 100%;
+    transition: 5s all;
+  }
+}
+
+.swiper-pagination-bullet {
+  margin: 0 0 30px 0 !important;
+  width: 10px !important;
+  height: 10px !important;
+  background-color: $color-grey !important;
+  opacity: 1 !important;
+  @media all and (min-width: $breakpoint-desktop-S) {
+    margin: 0 0 45px 0 !important;
+    width: 15px !important;
+    height: 15px !important;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $color-grey-light !important;
+}
+
+.swiper-pagination-current {
+  margin-right: -4px !important;
+}
+
+.swiper-pagination-total {
+  margin-left: -4px !important;
+}
+
+.swiper-pagination-fraction {
+  width: 20% !important;
+  @media all and (min-width: $breakpoint-mobile-M) {
+    width: 50px !important;
+  }
+
+}
+
+.about-swiper.swiper {
+  padding: 12px;
+}
+
+.about-swiper {
+  &__inner {
+    max-width: 290px;
+    margin: 0 auto;
+    padding: 30px 20px 38px;
+    box-shadow: 0 5px 20px rgba(25, 70, 186, 0.2);
+    @media all and (min-width: $breakpoint-desktop-S) {
+      margin: 0;
+    }
+  }
+
+  &__img {
+    margin-bottom: 30px;
+  }
+
+  &__desc {
+    @include about-swiper-desc;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 13px;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__pagination {
+    @include fraction;
+    color: $color-grey;
+  }
+
+  &__nav-arrows {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 106px;
+  }
+
+  &__next, &__prev {
+    width: 43px;
+    height: 43px;
+    cursor: pointer;
+
+    img {
       width: 100%;
+      height: 100%;
     }
   }
 
-  .swiper-prev.swiper-button-disabled {
-    opacity: 0.3;
-  }
-
-  .swiper-next {
+  &__next {
     transform: rotate(180deg);
+    margin-left: 20px;
   }
 
-  .swiper-next.swiper-button-disabled {
-    opacity: 0.3;
+  &__timer {
+    margin: 0 20px 0 15px;
+    width: 100%;
+    height: 4px;
+    background: $color-grey-light;
+    z-index: 2;
   }
 
-  .swiper-pagination {
-    margin: 0 12px;
-    font-size: 16px;
-    line-height: 19px;
-    @media all and (min-width: $breakpoint-tablet-L) {
-      font-size: 36px;
-      line-height: 42px;
-    }
+  &__timer-in {
+    background: $color-blue;
+    width: 0;
+    height: 4px;
+    display: block;
+  }
+
+  &__timer-in.active {
+    width: 100%;
+    transition: 5s all;
   }
 }
 

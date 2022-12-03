@@ -4,11 +4,6 @@
 @import './modules/colors';
 @import './modules/functions';
 
-:root {
-  --height-header-mobile: 37px;
-  --height-header-desktop: 79px;
-}
-
 *, *:before, *::before, *:after, *::after {
   box-sizing: border-box;
   outline: none;
@@ -23,16 +18,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 html, body {
-  //height: 100vh; //для того, чтобы прижать футер к низу страницы
   line-height: 1;
-  font-size: 14px;
-  //color: #fff;
   font-family: $primaryFont;
   scroll-behavior: smooth;
 }
 
 html.lock, body.lock {
-  //overflow-y: hidden;
   position: fixed;
   height: 100vh;
 }
@@ -62,7 +53,6 @@ html.lock, body.lock {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  //overflow-x: hidden;
 }
 
 ul, ol {
@@ -122,18 +112,11 @@ input[type=number] {
   color: $color-dark;
   position: relative;
   z-index: 1;
-  margin-top: var(--height-header-mobile);
-  @media all and (min-width: $breakpoint-tablet-L) {
-    margin-top: var(--height-header-desktop);
+  margin-top: 27px;
+  @media all and (min-width: $breakpoint-desktop-S) {
+    margin-top: 42px;
   }
 }
-
-//.homepage-screen {
-//  margin-bottom: 60px;
-//  @media all and (min-width: $breakpoint-desktop-M) {
-//    margin-bottom: 80px;
-//  }
-//}
 
 @import '../../components/all';
 
@@ -145,5 +128,6 @@ input[type=number] {
 
 @import './header';
 @import './footer';
+@import './pages/homepage';
 @import './ui';
 @import './modules/swiper';

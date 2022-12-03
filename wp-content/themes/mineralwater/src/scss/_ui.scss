@@ -6,20 +6,27 @@
 .btn {
   button {
     padding: 10px 15px;
-    @include menu-item;
-    background-color: $color-blue;
-    box-shadow: 0 15px 30px rgba(25, 70, 186, 0.2);
-    color: $color-white;
+    @include btn;
     cursor: pointer;
+    width: 100%;
   }
 }
 
 h1 {
-
+  @include h1;
+  width: 100%;
+  max-width: 271px;
+  @media all and (min-width: $breakpoint-mobile-S + 1) {
+    max-width: none;
+  }
+  @media all and (min-width: $breakpoint-desktop-S) {
+    max-width: 541px;
+  }
 }
 
 h2 {
-  
+  @include h2;
+  color: $color-blue;
 }
 
 a {

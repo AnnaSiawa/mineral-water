@@ -33,3 +33,55 @@
     line-height: 21px;
   }
 }
+
+@mixin btn {
+  font-family: $primaryFont;
+  font-style: normal;
+  font-weight: 700;
+  font-size: $font-size-btn;
+  line-height: 19px;
+}
+
+@mixin h1 {
+  font-family: $primaryFont;
+  font-size: $font-size-h1-m;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  @media all and (min-width: $breakpoint-desktop-S) {
+    font-size: $font-size-h1-d;
+    line-height: 49px;
+  }
+}
+
+@mixin h2 {
+  font-family: $primaryFont;
+  font-size: $font-size-h2-m;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 41px;
+  @media all and (min-width: $breakpoint-desktop-S) {
+    font-size: $font-size-h2-d;
+    line-height: 75px;
+  }
+}
+
+@mixin fraction{
+  font-size: $font-size-fraction-m;
+  font-family: $primaryFont;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  @media all and (min-width: $breakpoint-desktop-S) {
+    font-weight: 600;
+    font-size: $font-size-fraction-d;
+  }
+}
+
+@mixin about-swiper-desc {
+  font-size: $font-size-h1-m;
+  font-family: $primaryFont;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 27px;
+}

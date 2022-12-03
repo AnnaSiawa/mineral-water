@@ -1,0 +1,84 @@
+@import "../modules/vars";
+@import "../modules/colors";
+@import "../modules/breakpoints";
+@import "../modules/functions";
+
+.main-screen {
+  box-shadow: 0 32px 40px rgba(25, 70, 186, 0.1);
+
+  &__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 21px;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 56px;
+    }
+  }
+
+  h1 {
+    flex: 0 1 50%;
+    margin-bottom: 67px;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img-b3 {
+    display: none;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      display: block;
+      position: absolute;
+      bottom: 33px;
+      left: 426px;
+
+    }
+    img {
+      @media all and (min-width: $breakpoint-desktop-S) {
+        width: 330px;
+      }
+    }
+  }
+
+  &__slider {
+    flex: 0 1 50%;
+  }
+}
+
+.about-screen {
+  box-shadow: 0 15px 40px rgba(25, 70, 186, 0.1);
+
+  &__inner {
+    padding: 43px 0 0 0;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: row;
+      padding: 159px 0 0 0;
+    }
+  }
+
+  &__block {
+    flex: 0 1 50%;
+    min-width: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 41px;
+      @media all and (min-width: $breakpoint-desktop-S) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  h2 {
+    margin: 0 0 22px 0;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      margin: 0 0 106px 0;
+    }
+  }
+}
+

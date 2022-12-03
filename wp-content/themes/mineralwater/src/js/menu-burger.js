@@ -1,4 +1,25 @@
 window.onload = function () {
+
+    //таймер на прелоадере для swiperProduct
+    function startTimer () {
+        document.querySelector('.product-swiper__timer-in').classList.remove('active');
+        setTimeout(() => {
+            document.querySelector('.product-swiper__timer-in').classList.add('active');
+        }, 500);
+    }
+    //запуск таймера при загрузке страницы swiperProduct
+    startTimer();
+
+    //таймер на прелоадере для swiperAbout
+    function startTimerSwiperAbout () {
+        document.querySelector('.about-swiper__timer-in').classList.remove('active');
+        setTimeout(() => {
+            document.querySelector('.about-swiper__timer-in').classList.add('active');
+        }, 500);
+    }
+    //запуск таймера при загрузке страницы swiperAbout
+    startTimerSwiperAbout ();
+
     const iconMenu = document.querySelector('.menu__icon');
     const bodyMenu = document.querySelector('.mobile-menu__nav');
 
