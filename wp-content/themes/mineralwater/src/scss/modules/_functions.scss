@@ -85,3 +85,11 @@
   font-weight: 600;
   line-height: 27px;
 }
+
+@mixin input {
+  font-family: $primaryFont;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $primary-font-size;
+  line-height: 0;
+}

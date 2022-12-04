@@ -51,15 +51,18 @@ const swiperAbout = new Swiper('.about-swiper', {
     watchOverflow: true,
     loop: false,
     slidesPerGroup: 1,
-    slidesPerView: 1,
     pagination: {
         el: '.about-swiper__pagination',
         clickable: true,
         type: 'fraction',
     },
     breakpoints: {
-        1400: {
+        320: {
             slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        1400: {
+            slidesPerView: 2.2,
             spaceBetween: 10,
         }
     },

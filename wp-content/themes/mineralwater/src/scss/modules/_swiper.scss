@@ -162,11 +162,10 @@
   @media all and (min-width: $breakpoint-mobile-M) {
     width: 50px !important;
   }
-
 }
 
 .about-swiper.swiper {
-  padding: 12px;
+  padding: 12px 12px 20px;
 }
 
 .about-swiper {
@@ -245,5 +244,18 @@
     width: 100%;
     transition: 5s all;
   }
+
+  .swiper-slide-active {
+    opacity: 1;
+  }
+
+  .swiper-slide-next, .swiper-slide-prev {
+    opacity: 50%;
+  }
+
+  .swiper-slide-next ~ div {
+    opacity: 20%;
+  }
+
 }
 
